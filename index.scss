@@ -1,0 +1,8 @@
+$bg-colorRed : #f30808;
+.welcome{
+    background: $bg-colorRed;
+    width: 1400px;
+    display: grid;
+    border: 2px solid $bg-colorRed;
+
+}
