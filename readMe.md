@@ -14,6 +14,7 @@ needs to improve the images. have color images for now.
     worked on the Welcome sign and the Intro of my portfolio.  
     
     *Need to continue on "My Work", "Contact" , and the Social media icons..
-    *On my Work needs more images of my actual work. (Maybe screen shot some old assignments or update an old assignment.)
+    *On my Work needs more images of my actual work. 
+    *(Maybe screen shot some old assignments or update an old assignment.)
     
     
