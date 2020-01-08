@@ -18,3 +18,12 @@ needs to improve the images. have color images for now.
     *(Maybe screen shot some old assignments or update an old assignment.)
     
     
+
+
+    
+1/7/2020:
+Just finish part 4 and 5.
+
+** black arrow needs to be changed to a white arrow.
+** The :Hover isn't working properly. 
+** Description for other projects need to be hidden.
