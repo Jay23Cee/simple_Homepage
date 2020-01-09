@@ -27,3 +27,12 @@ Just finish part 4 and 5.
 ** black arrow needs to be changed to a white arrow.
 ** The :Hover isn't working properly. 
 ** Description for other projects need to be hidden.
+
+
+
+1/8/2020:
+Finish with the Contact and Footer.
+Footer needs a better icon (suggested to use white icons for github and linked)
+fix the hover problem. Just needed to use the hover in the img.
+also adjusted the about me for  desktop view.
+
