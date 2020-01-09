@@ -360,7 +360,7 @@ h2 {
 .welcome h1 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: #223843;
+  color: #050a4b;
   line-height: 2;
   text-align: center;
 }
@@ -368,7 +368,7 @@ h2 {
   font-family: "Six Caps", sans-serif;
   font-size: 7.5rem;
   letter-spacing: 0.15em;
-  color: #ce9e02;
+  color: #313142;
   text-transform: uppercase;
   line-height: 1;
   font-weight: 400;
@@ -379,7 +379,7 @@ h2 {
   display: block;
   width: 80%;
   height: 1px;
-  background: #223843;
+  background: #050a4b;
 }
 .welcome h1::before {
   margin: 0 auto 2em;
@@ -411,7 +411,7 @@ h2 {
 }
 
 .intro-middle {
-  background: #223843;
+  background: #050a4b;
   padding: 2.5em 2vw;
   text-align: center;
   display: flex;
@@ -430,9 +430,10 @@ h2 {
 .about-me {
   width: 90%;
   margin: 0 auto;
-  max-width: 50em;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  max-width: 51em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background: rgba(153, 5, 0, 0.959);
 }
 .about-me::after {
   content: "";
@@ -440,13 +441,18 @@ h2 {
   clear: both;
 }
 
+@media screen and (min-width: 62em) {
+  .about-me {
+    background: #002e6b !important;
+  }
+}
 .about-img {
-  max-height: 25;
+  max-height: 23;
 }
 @media (min-width: 42em) {
   .about-img {
     float: left;
-    margin-right: 1em;
+    margin-right: 3em;
   }
 }
 
@@ -462,12 +468,42 @@ h2 {
 @supports (display: grid) {
   .about-me {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 1.5fr [port-end];
+  }
+  @media screen and (min-width: 62em) {
+    .about-me .about-me {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .about-me .about-img {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+    .about-me .about-title {
+      grid-column: 2/4;
+      grid-row: 1/2;
+      align-self: start;
+      margin-top: 0.1em;
+      margin-left: 1em;
+    }
+    .about-me .about-subtitle {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      align-self: start;
+      margin-top: 2em;
+    }
+    .about-me .about-text {
+      grid-column: 1/4;
+      grid-row: 1/3;
+      align-self: flex-end;
+      margin-left: 48%;
+      margin-bottom: 8em;
+      width: 50%;
+      text-align: left;
+    }
   }
 
   .about-img {
-    grid-column: port/img;
+    grid-column: port-start/img-end;
     grid-row: 1/2;
   }
 
@@ -484,8 +520,8 @@ h2 {
 }
 .portfolio {
   text-align: center;
-  background: #E8E9EB;
-  padding: 5em 0;
+  padding: 3em 0;
+  background: #f0ecec;
 }
 
 .portfolio-items {
@@ -493,36 +529,38 @@ h2 {
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 60em;
 }
 
 .portfolio-item {
   position: relative;
   overflow: hidden;
   flex: 1 1 20rem;
+  margin: 0em 0em;
 }
 .portfolio-item img {
   display: block;
-  width: 100%;
+  max-width: auto;
+  height: auto;
+}
+.portfolio-item:hover figcaption, .portfolio-item:focus figcaption {
+  top: 0 !important;
+  background: blue;
 }
 
 .portfolio-item figcaption {
   position: absolute;
-  top: 100;
+  top: 99%;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 2em;
-  background: rbga(blue, 0.75);
+  background: green;
   color: white;
   text-align: left;
   display: flex;
   flex-direction: column;
-  transition: top ease-in-out 0ms;
-}
-.portfolio-item figcaption:hover figcaption, .portfolio-item figcaption:focus figcaption {
-  top: 0;
-  color: yellow;
+  transition: top ease-in-out 250ms;
 }
 
 .portfolio-title {
@@ -536,7 +574,7 @@ h2 {
 }
 
 .portfolio-desc {
-  display: none;
+  display: none !important;
 }
 
 .portfolio-link {
@@ -572,6 +610,83 @@ h2 {
   .featured .portfolio-desc {
     display: block;
   }
+}
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 5em 0;
+}
+.contact h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin: 1em;
+  color: #606060;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  padding: 0.75em;
+  width: 100%;
+  background: #fbfbfc;
+  border: 1px solid #E8E9EB;
+  font-size: 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  margin-top: 1em;
+  margin-left: auto;
+  background: #03AFC2;
+  border: none;
+  font-family: "Six Caps", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 400;
+  padding: 0.5em 1.5em;
+}
+
+footer {
+  background: #050a4b;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.social-icon {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 5em;
+  display: flex;
+  margin: 1.75em auto;
+  margin-left: 28em;
+}
+
+.social-icon {
+  width: 15%;
+  height: 15%;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: white;
+  margin: 2.25em auto;
+  width: 25%;
 }
 
 /*# sourceMappingURL=main.css.map */

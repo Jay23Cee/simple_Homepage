@@ -1,9 +1,10 @@
 .portfolio{
     text-align: center;
-    background: $light-gray ;
-    padding: 5em 0 ;
+    padding: 3em 0 ;
+    background: $port-color;
 
- 
+  
+   
 
 }
 
@@ -11,7 +12,7 @@
 .portfolio-items{
     display:flex;
     flex-wrap:wrap;
-    @include container($max-width:75em);
+    @include container($max-width:60em);
 }
 
 
@@ -20,10 +21,24 @@
     position: relative;
     overflow: hidden;
     flex: 1 1 20rem;
-
+    margin:  0em 0em;
     img{
         display:block;
-        width:100%
+        max-width:  auto;
+        height: auto;
+        
+        
+        
+    }
+
+    &:hover , 
+    &:focus {
+        figcaption{
+            top:0 !important;
+            background:blue;
+        }
+
+       
     }
 
 
@@ -31,24 +46,20 @@
 
 .portfolio-item figcaption {
     position: absolute;
-    top: 100;
+    top: 99%;
     bottom:0;
     right:0;
     left:0;
     padding:2em;
-
-    background: rbga(blue, .75);
+    
+    background: green;
     color:white;
     text-align:left;
     display:flex;
     flex-direction: column;
     transition: top ease-in-out 250ms;
-    
-    &:hover figcaption,
-    &:focus figcaption{
-        top:0;
-        
-    }
+   
+   
  
 
 }
@@ -66,7 +77,8 @@
 
 
 .portfolio-desc{
-    display:none;
+    display:none !important;
+    
 
 
 }
@@ -92,10 +104,13 @@
 }
 
 @supports (display:grid){
-          
+     
+  
     .portfolio-items{
         display:grid;
         grid-template-columns:  repeat(2, 1fr);
+        
+      
         
      
         

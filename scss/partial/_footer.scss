@@ -1,0 +1,33 @@
+footer {
+    background : $dark-blue;
+    padding: 5em 0;
+    text-align: center;
+    
+}
+
+.social-icon{
+    @include container($max-width: 5em);
+    display:flex;
+    
+    margin: 1.75em auto ;
+    margin-left: 28em;
+    
+}
+
+.social-icon{
+    width:15%;
+    height:15%;
+    
+}
+
+
+.copyright{
+    &::before{
+        content:'';
+        display:block;
+        height:1px;
+        background: rgba($white, $alpha: 1.5);
+        margin: 2.25em auto;
+        width:25%;
+    }
+}
